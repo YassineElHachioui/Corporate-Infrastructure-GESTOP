@@ -1,15 +1,16 @@
 # Proyecto GESTOP: Diseño e Implementación de Infraestructura IT
 
-> Trabajo de Final de Grado (Crédito de Síntesis) - SMX
-> Autor: Yassine El Hachioui
+> **Trabajo de Final de Grado (Crédito de Síntesis) - SMX**
+> **Autor:** Yassine El Hachioui
 
 Este proyecto documenta el diseño integral, presupuesto y despliegue técnico de la infraestructura informática para la empresa simulada "Gestop". El alcance abarca desde el diseño físico de la red (cableado y electrónica) hasta la administración de servicios en entornos híbridos Windows/Linux.
 
 ## Objetivos del Proyecto
 1.  Diseñar la red física sobre plano: cálculo de cableado, rosetas y armarios de comunicaciones.
-2.  Implementar una arquitectura cliente-servidor híbrida (Windows Server y Ubuntu Linux).
-3.  Desplegar servicios de red críticos: Web, Correo, Archivos y Directorio Activo.
-4.  Realizar el estudio de hardware y presupuesto económico.
+2.  Simular la topología lógica y el enrutamiento avanzado mediante Cisco Packet Tracer.
+3.  Implementar una arquitectura cliente-servidor híbrida (Windows Server y Ubuntu Linux).
+4.  Desplegar servicios de red críticos: Web, Correo, Archivos y Directorio Activo.
+5.  Realizar el estudio de hardware y presupuesto económico.
 
 ---
 
@@ -23,6 +24,24 @@ Se realizó un diseño sobre plano de las oficinas para calcular la tirada de ca
 *(Aquí puedes insertar la imagen del plano o del presupuesto de red si la tienes)*
 
 ---
+
+## 1.2 Simulación Lógica de Red (Cisco Packet Tracer)
+Se ha diseñado una topología de red distribuida simulando un edificio corporativo de **3 plantas**, asegurando alta disponibilidad y segmentación de tráfico.
+
+* **Topología Física:** Arquitectura jerárquica con **un Router dedicado por planta** y Switches de distribución.
+* **Enrutamiento Dinámico (EIGRP):** Implementación del protocolo **EIGRP** para la interconexión automática de los routers de cada planta, garantizando redundancia y convergencia rápida ante caídas.
+* **Segmentación (VLANs):** Aislamiento de tráfico mediante VLANs para mejorar la seguridad:
+    - **VLAN Sistemas:** Administración y mantenimiento.
+    - **VLAN Seguridad:** Exclusiva para auditoría y control.
+* **Gestión de Direcciones (DHCP):** Despliegue de un **Servidor DHCP Centralizado** que asigna direccionamiento dinámico a todos los equipos de las 3 plantas (configuración de *IP Helper-Address* en los routers para retransmitir las solicitudes).
+
+![Topología de Red Cisco](network-topology.png)
+*Figura: Esquema de red de 3 plantas con enrutamiento EIGRP y Servidor DHCP.*
+
+ **[Descargar Archivo de Simulación (.pkt)](Simulacion_Red_GESTOP.pkt)**
+
+---
+
 ## 2. Administración de Servidores
 
 ### Entorno Windows Server 2019
@@ -32,7 +51,7 @@ Actúa como el controlador principal de la infraestructura.
 * **Servidor FTP:** Repositorio de archivos departamental con permisos NTFS estrictos y aislamiento de usuarios.
 * **Servicios de Red:** Configuración de servidor DNS y DHCP para la asignación dinámica de direcciones.
 
-![Servidor Web IIS](image.png)
+![Servidor Web IIS](web-iis.png)
 *Figura 1: Despliegue del servicio web en IIS.*
 
 ### Entorno Linux (Ubuntu Server) - Servidor de Correo
@@ -59,10 +78,11 @@ Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidade
 ---
 
 ## Tecnologías y Herramientas Utilizadas
+* **Simulación:** Cisco Packet Tracer.
 * **Virtualización:** Oracle VirtualBox (Configuración de Red Interna y NAT).
 * **Sistemas Operativos:** Windows Server 2019, Windows 10, Ubuntu Server LTS.
-* **Protocolos:** TCP/IP, DNS, DHCP, HTTP, FTP, SMTP, IMAP.
+* **Protocolos:** TCP/IP, DNS, DHCP, HTTP, FTP, SMTP, IMAP, EIGRP.
 * **Software de Servidor:** Microsoft IIS, Bind9, Postfix, Dovecot, Roundcube.
 
-> [Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP%20-%20Yassine%20El.pdf)
-> [Ver Detalle Configuración Servidor Correo Linux (PDF)](_Pt2.2%20Instal·lació%20i%20conf
+> **[Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP%20-%20Yassine%20El.pdf)**
+> **[Ver Detalle Configuración Servidor Correo Linux (PDF)](_Pt2.2%20Instal·lació%20i%20configuració%20d'un%20Servidor%20de%20Correu%20en%20Linux.pdf)**
