@@ -32,7 +32,7 @@ Actúa como el controlador principal de la infraestructura.
 * **Servidor FTP:** Repositorio de archivos departamental con permisos NTFS estrictos y aislamiento de usuarios.
 * **Servicios de Red:** Configuración de servidor DNS y DHCP para la asignación dinámica de direcciones.
 
-![Servidor Web IIS](web-iis.png)
+![Servidor Web IIS](image.png)
 *Figura 1: Despliegue del servicio web en IIS.*
 
 ### Entorno Linux (Ubuntu Server) - Servidor de Correo
