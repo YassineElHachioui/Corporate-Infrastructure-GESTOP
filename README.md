@@ -1,47 +1,68 @@
-# 🏢 GESTOP: Proyecto de Infraestructura IT Híbrida
+# Proyecto GESTOP: Diseño e Implementación de Infraestructura IT
 
-> **Crédito de Síntesis - Grado Medio SMX**
->
-> Este proyecto documenta el diseño, presupuesto y despliegue técnico de la infraestructura informática completa para una empresa simulada ("Gestop"). Se integran servicios heterogéneos (Windows/Linux) y se define la arquitectura de hardware.
+> Trabajo de Final de Grado (Crédito de Síntesis) - SMX
+> Autor: Yassine El Hachioui
 
-## 🎯 Objetivos Técnicos
-- **Interoperabilidad:** Integración de servidores Windows y Linux en un mismo dominio.
-- **Servicios de Red:** Despliegue de Web (IIS), Transferencia de ficheros (FTP) y Correo (Postfix).
-- **Hardware:** Selección de componentes y montaje de equipos según perfil de usuario.
+Este proyecto documenta el diseño integral, presupuesto y despliegue técnico de la infraestructura informática para la empresa simulada "Gestop". El alcance abarca desde el diseño físico de la red (cableado y electrónica) hasta la administración de servicios en entornos híbridos Windows/Linux.
+
+## Objetivos del Proyecto
+1.  Diseñar la red física sobre plano: cálculo de cableado, rosetas y armarios de comunicaciones.
+2.  Implementar una arquitectura cliente-servidor híbrida (Windows Server y Ubuntu Linux).
+3.  Desplegar servicios de red críticos: Web, Correo, Archivos y Directorio Activo.
+4.  Realizar el estudio de hardware y presupuesto económico.
 
 ---
 
-## ⚙️ Implementaciones Realizadas
+## 1. Infraestructura de Red Física y Electrónica
+Se realizó un diseño sobre plano de las oficinas para calcular la tirada de cable necesaria y la ubicación de los puestos de trabajo.
 
-### 1. Servidor Web y FTP (Windows Server 2019)
-Se configuró **IIS (Internet Information Services)** para alojar la intranet corporativa y un servidor FTP con autenticación segura.
-- **Acceso Web:** `http://www.gestop.local`
-- **Seguridad FTP:** Permisos NTFS aplicados a carpetas de usuario.
+* **Cableado Estructurado:** Cálculo de metros lineales de cable UTP Cat 6, canaletas y rosetas RJ45.
+* **Electrónica de Red:** Selección de Routers para la salida a Internet y Switches gestionables para la interconexión de la LAN.
+* **Inventario:** Presupuesto detallado de Racks, Paneles de Parcheo (Patch Panels) y Latiguillos.
+
+*(Aquí puedes insertar la imagen del plano o del presupuesto de red si la tienes)*
+
+---
+## 2. Administración de Servidores
+
+### Entorno Windows Server 2019
+Actúa como el controlador principal de la infraestructura.
+* **Active Directory (AD DS):** Gestión centralizada de usuarios, grupos y unidades organizativas.
+* **Servidor Web (IIS):** Alojamiento de la intranet corporativa (`www.gestop.local`).
+* **Servidor FTP:** Repositorio de archivos departamental con permisos NTFS estrictos y aislamiento de usuarios.
+* **Servicios de Red:** Configuración de servidor DNS y DHCP para la asignación dinámica de direcciones.
 
 ![Servidor Web IIS](web-iis.png)
-*Figura 1: Intranet corporativa desplegada sobre IIS.*
+*Figura 1: Despliegue del servicio web en IIS.*
 
-![Servidor FTP](ftp-server.png)
-*Figura 2: Acceso al servidor de ficheros FTP.*
+### Entorno Linux (Ubuntu Server) - Servidor de Correo
+Se implementó un servidor dedicado para la gestión de comunicaciones, integrando múltiples protocolos para un servicio de correo completo.
+* **MTA (Mail Transfer Agent):** Postfix para el enrutamiento y envío de correos (SMTP).
+* **MDA (Mail Delivery Agent):** Dovecot para la recepción de correos mediante protocolos IMAP/POP3.
+* **Webmail:** Implementación de Roundcube para acceso al correo vía navegador.
+* **Seguridad:** Configuración de Firewall (UFW) permitiendo únicamente puertos de correo (25, 143, 993, etc.) y SSH.
+
+![Configuración Linux Postfix](linux-mail.png)
+*Figura 2: Gestión del servicio de correo en Linux.*
 
 ---
 
-### 2. Servidor de Correo (Linux Ubuntu Server)
-Implementación de un servidor de mensajería utilizando **Postfix**.
-- **MTA:** Configuración de Postfix para gestión de correo saliente/entrante.
-- **Integración:** El servidor Linux resuelve nombres mediante el DNS del Directorio Activo.
+## 3. Arquitectura de Hardware (Workstations)
+Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidades de cada perfil profesional, comparando arquitecturas Intel y AMD.
 
----
-
-### 3. Arquitectura de Hardware
-Estudio de mercado y selección de componentes para estaciones de trabajo de alto rendimiento (Ciberseguridad/Virtualización) y ofimática básica.
+* **Perfil Ofimática:** Equipos optimizados para tareas administrativas y gestión documental.
+* **Perfil Técnico/Ciberseguridad:** Estaciones de trabajo de alto rendimiento para virtualización y auditoría.
 
 ![Tabla de Hardware](hardware-setup.png)
-*Figura 3: Planificación de componentes (AMD Ryzen / Intel Core).*
+*Figura 3: Tabla comparativa y presupuesto de componentes.*
 
 ---
 
-## 🏆 Tecnologías Utilizadas
-- **Virtualización:** Oracle VirtualBox.
-- **Sistemas Operativos:** Windows Server 2019, Windows 10, Ubuntu Server.
-- **Protocolos:** HTTP, FTP, SMTP, DNS, DHCP.
+## Tecnologías y Herramientas Utilizadas
+* **Virtualización:** Oracle VirtualBox (Configuración de Red Interna y NAT).
+* **Sistemas Operativos:** Windows Server 2019, Windows 10, Ubuntu Server LTS.
+* **Protocolos:** TCP/IP, DNS, DHCP, HTTP, FTP, SMTP, IMAP.
+* **Software de Servidor:** Microsoft IIS, Bind9, Postfix, Dovecot, Roundcube.
+
+> [Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP%20-%20Yassine%20El.pdf)
+> [Ver Detalle Configuración Servidor Correo Linux (PDF)](_Pt2.2%20Instal·lació%20i%20conf
