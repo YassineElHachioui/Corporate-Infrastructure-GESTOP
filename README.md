@@ -21,8 +21,7 @@ Se realizó un diseño sobre plano de las oficinas para calcular la tirada de ca
 * **Electrónica de Red:** Selección de Routers para la salida a Internet y Switches gestionables para la interconexión de la LAN.
 * **Inventario:** Presupuesto detallado de Racks, Paneles de Parcheo (Patch Panels) y Latiguillos.
 
-*(Aquí puedes insertar la imagen del plano o del presupuesto de red si la tienes)*
-
+![Inventario](Captura de pantalla 2026-01-29 015816.png)
 ---
 
 ## 1.2 Simulación Lógica de Red (Cisco Packet Tracer)
@@ -51,8 +50,10 @@ Actúa como el controlador principal de la infraestructura.
 * **Servidor FTP:** Repositorio de archivos departamental con permisos NTFS estrictos y aislamiento de usuarios.
 * **Servicios de Red:** Configuración de servidor DNS y DHCP para la asignación dinámica de direcciones.
 
-![Servidor Web IIS](web-iis.png)
+![Servidor Web IIS](Captura de pantalla 2026-01-29 023024.png)
 *Figura 1: Despliegue del servicio web en IIS.*
+![Servidor Web FTP](Captura de pantalla 2026-01-29 023159.png)
+*Figura 1.2: Despliegue del servicio FTP.*
 
 ### Entorno Linux (Ubuntu Server) - Servidor de Correo
 Se implementó un servidor dedicado para la gestión de comunicaciones, integrando múltiples protocolos para un servicio de correo completo.
@@ -61,8 +62,7 @@ Se implementó un servidor dedicado para la gestión de comunicaciones, integran
 * **Webmail:** Implementación de Roundcube para acceso al correo vía navegador.
 * **Seguridad:** Configuración de Firewall (UFW) permitiendo únicamente puertos de correo (25, 143, 993, etc.) y SSH.
 
-![Configuración Linux Postfix](linux-mail.png)
-*Figura 2: Gestión del servicio de correo en Linux.*
+![Configuración Linux Postfix](Captura de pantalla 2026-01-29 024538.png)
 
 ---
 
@@ -72,7 +72,7 @@ Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidade
 * **Perfil Ofimática:** Equipos optimizados para tareas administrativas y gestión documental.
 * **Perfil Técnico/Ciberseguridad:** Estaciones de trabajo de alto rendimiento para virtualización y auditoría.
 
-![Tabla de Hardware](hardware-setup.png)
+![Tabla de Hardware](Captura de pantalla 2026-01-29 015816.png)
 *Figura 3: Tabla comparativa y presupuesto de componentes.*
 
 ---
@@ -84,5 +84,5 @@ Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidade
 * **Protocolos:** TCP/IP, DNS, DHCP, HTTP, FTP, SMTP, IMAP, EIGRP.
 * **Software de Servidor:** Microsoft IIS, Bind9, Postfix, Dovecot, Roundcube.
 
-> **[Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP%20-%20Yassine%20El.pdf)**
-> **[Ver Detalle Configuración Servidor Correo Linux (PDF)](_Pt2.2%20Instal·lació%20i%20configuració%20d'un%20Servidor%20de%20Correu%20en%20Linux.pdf)**
+> **[Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP - Yassine El.pdf)**
+> **[Ver Detalle Configuración Servidor Correo Linux (PDF)](Instal·lació i configuració d'un Servidor de Correu en Linux.docx.pdf)**
