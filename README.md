@@ -21,7 +21,7 @@ Se realizó un diseño sobre plano de las oficinas para calcular la tirada de ca
 * **Electrónica de Red:** Selección de Routers para la salida a Internet y Switches gestionables para la interconexión de la LAN.
 * **Inventario:** Presupuesto detallado de Racks, Paneles de Parcheo (Patch Panels) y Latiguillos.
 
-![Inventario](Captura de pantalla 2026-01-29 015816.png)
+![Inventario]([Captura de pantalla 2026-01-29 015816.png](https://github.com/YassineElHachioui/Corporate-Infrastructure-GESTOP/commit/eb7d30a5735d50a1b7b0ca6547822d0beb32a7e7#diff-5e40bc8aed745c27d4be2d7757474eeba53a219618bb7ac9f62135a6ca5e8665))
 ---
 
 ## 1.2 Simulación Lógica de Red (Cisco Packet Tracer)
