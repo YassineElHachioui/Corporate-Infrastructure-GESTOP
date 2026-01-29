@@ -62,7 +62,7 @@ Se implementó un servidor dedicado para la gestión de comunicaciones, integran
 * **Webmail:** Implementación de Roundcube para acceso al correo vía navegador.
 * **Seguridad:** Configuración de Firewall (UFW) permitiendo únicamente puertos de correo (25, 143, 993, etc.) y SSH.
 
-![Configuración Linux Postfix](Captura de pantalla 2026-01-29 024538.png)
+![Configuración Linux Postfix](Captura_de_pantalla_2026-01-29_024538.png)
 
 ---
 
@@ -72,7 +72,7 @@ Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidade
 * **Perfil Ofimática:** Equipos optimizados para tareas administrativas y gestión documental.
 * **Perfil Técnico/Ciberseguridad:** Estaciones de trabajo de alto rendimiento para virtualización y auditoría.
 
-![Tabla de Hardware](Captura de pantalla 2026-01-29 015816.png)
+![Tabla de Hardware](Captura_de_pantalla_2026-01-29_015816.png)
 *Figura 3: Tabla comparativa y presupuesto de componentes.*
 
 ---
@@ -84,5 +84,5 @@ Estudio de mercado para dotar a la empresa de equipos adaptados a las necesidade
 * **Protocolos:** TCP/IP, DNS, DHCP, HTTP, FTP, SMTP, IMAP, EIGRP.
 * **Software de Servidor:** Microsoft IIS, Bind9, Postfix, Dovecot, Roundcube.
 
-> **[Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP - Yassine El.pdf)**
-> **[Ver Detalle Configuración Servidor Correo Linux (PDF)](Instal·lació i configuració d'un Servidor de Correu en Linux.docx.pdf)**
+> **[Ver Documentación Completa del Proyecto GESTOP (PDF)](GESTOP_-_Yassine_El.pdf)**
+> **[Ver Detalle Configuración Servidor Correo Linux (PDF)](Instal·lació_i_configuració_d'un_Servidor_de_Correu_en_Linux.docx.pdf)**
